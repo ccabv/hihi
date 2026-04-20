@@ -1,0 +1,386 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== HEADER / BANNER ===== */
+#header {
+    width: 100%;
+    background: #1c5fe4;
+}
+
+#header img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+#header-content {
+    display: flex;
+    align-items: center;
+    background: #003399;
+    padding: 8px 10px;
+    color: white;
+}
+
+#header-content .logo-text {
+    margin-left: 10px;
+}
+
+#header-content .logo-text .title-vn {
+    color: #ff6600;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#header-content .logo-text .title-en {
+    color: #ffcc00;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#header-content .logo-text .uni-name {
+    color: #ffff00;
+    font-size: 11px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+#navbar {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 8px 18px;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-right: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    background: #cc0000;
+    color: #fff;
+}
+
+#navbar ul li:first-child a.active {
+    background: #009900;
+    color: #fff;
+}
+
+/* ===== MAIN LAYOUT ===== */
+#wrapper {
+    display: flex;
+    min-height: 400px;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+#sidebar {
+    width: 190px;
+    min-width: 190px;
+    background: gray;
+    padding: 10px 8px;
+}
+
+#sidebar .sidebar-title {
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    margin: 8px 0 6px 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+#sidebar ul li a {
+    display: block;
+    color: #0000cc;
+    font-size: 13px;
+    padding: 3px 4px;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: underline;
+    color: #cc0000;
+}
+
+#sidebar ul li a.active-link {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+#sidebar hr {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 6px 0;
+}
+
+/* ===== CONTENT AREA ===== */
+#content {
+    flex: 1;
+    padding: 20px 24px;
+    background: #fff;
+}
+
+#content h2 {
+    color: #cc0000;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+/* ===== FOOTER ===== */
+#footer {
+    background: #006600;
+    color: #fff;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ===== PAGE: TRANG CHU ===== */
+#trangchu-content {
+    text-align: center;
+}
+
+#trangchu-content h2 {
+    color: #cc0000;
+    margin-bottom: 12px;
+}
+
+#trangchu-content img.campus-img {
+    max-width: 700px;
+    width: 90%;
+    border: 1px solid #ccc;
+}
+
+/* ===== PAGE: TUYEN SINH ===== */
+#tuyensinh-content img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ===== PAGE: THONG TIN CA NHAN (Form) ===== */
+.form-section {
+    margin-bottom: 14px;
+}
+
+.form-section h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.form-group label {
+    width: 150px;
+    min-width: 150px;
+    font-size: 13px;
+    padding-top: 4px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    border: 1px solid #999;
+    padding: 4px 6px;
+    font-size: 13px;
+    width: 220px;
+}
+
+.form-group textarea {
+    height: 55px;
+    resize: vertical;
+}
+
+.form-group select {
+    width: 80px;
+}
+
+.form-group .radio-group label {
+    width: auto;
+    margin-right: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.form-buttons {
+    margin-top: 12px;
+    padding-left: 150px;
+}
+
+.form-buttons button {
+    padding: 5px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-right: 8px;
+    background: #e0e0e0;
+    border: 1px solid #999;
+}
+
+.form-buttons button:hover {
+    background: #c0c0c0;
+}
+
+/* ===== PAGE: CHUONG TRINH DAO TAO (Table) ===== */
+.training-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.training-table th,
+.training-table td {
+    border: 1px solid yellow;
+    padding: 5px 8px;
+    text-align: center;
+}
+
+.training-table thead th {
+    background: #cc0000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.training-table td.group-label {
+    color: #cc0000;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.training-caption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 14px;
+    font-style: italic;
+}
+
+/* ===== PAGE: CHUONG TRINH WEB ===== */
+#chuongtrinhweb-content {
+    background:rgba(62, 175, 236, 0.783);
+    min-height: 300px;
+    min-width: 1080px;
+    padding: 16px 20px; 
+}
+
+#chuongtrinhweb-content h2 {
+    color: #cc0000;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+#chuongtrinhweb-content .section-title {
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 10px 0 4px 0;
+}
+
+#chuongtrinhweb-content ol {
+    padding-left: 30px;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+#chuongtrinhweb-content ol li {
+    margin-bottom: 2px;
+}
+
+#chuongtrinhweb-content hr {
+    border: none;
+    border-top: 1px solid #666;
+    margin: 14px auto;
+    width: 60%;
+}
+
+#chuongtrinhweb-content .contact-info {
+    color: #cc0000;
+    font-size: 13px;
+}
+
+#chuongtrinhweb-content .contact-info a {
+    color: #0000cc;
+    font-style: italic;
+}
+
+/* ===== PAGE: LIEN HE ===== */
+#lienhe-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+    background: #ccc; /* nền xám */
+}
+
+#lienhe-content .lienhe-info {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+#lienhe-content .lienhe-info p {
+    margin-bottom: 4px;
+}
+
+#lienhe-content .lienhe-info a {
+    color: #0000cc;
+}
+
+#lienhe-content .lienhe-img img {
+    width: 240px;
+    border: 1px solid #ccc;
+}
+
+.lienhe-footer-name {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    font-style: italic;
+}
